@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:vediostream/Screen/Welcome/Login_Screen.dart';
 
 import '../HomeSc.dart';
 
@@ -10,11 +11,11 @@ class SplashSc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 2), () {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeSc(),
+            builder: (context) => LoginSc(),
           ));
     });
     return Scaffold(

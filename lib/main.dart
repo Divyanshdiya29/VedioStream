@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:vediostream/Screen/Welcome/Login_Screen.dart';
+import 'package:vediostream/utils/colors.dart';
 
 import 'Screen/Welcome/SplashSc.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-
-
-        ), home: SplashSc(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,
+      title: 'Video Stream',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+      ),
+      // routes:
+      // {
+      //   '/login':(context)=> const LoginSc(),
+      // },
+      home: SplashSc(),
+    );
   }
 }
